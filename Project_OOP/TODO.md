@@ -1,10 +1,10 @@
 # CRUD
 
     ## meds
-        - id
-        - price
+        - id {cm:2023-05-05}
+        - price {cm:2023-05-05}
         - exp
-        -
+        - name {cm:2023-05-05}
 
     ## clients
     ## Inv
