@@ -128,20 +128,20 @@ vip Vip[SIZE] = {vip("ahmed", 1, 1000, 01042333253, "pass1", 10),
 
 // ________________________________________________________________________________
 
-// void printCustomers(Customer customers)
-// {
-//     std::cout << "Customers:" << std::endl;
-//     for (int i = 0; i < SIZE; i++)
-//     {
-//         Customer c = customers[i];
-//         if (c.name != "")
-//         {
-//             std::cout << "Name: " << c.name << std::endl;
-//             std::cout << "ID: " << c.id << std::endl;
-//             std::cout << "Balance: " << c.balance << std::endl;
-//             std::cout << "Phone Number: " << c.number << std::endl;
-//             std::cout << "Password: " << c.password << std::endl;
-//             std::cout << std::endl;
-//         }
-//     }
-// }
+void printCustomers(Customer customers[], int size)
+{
+    std::cout << "Customers:" << std::endl;
+    for (int i = 0; i < size; i++)
+    {
+        Customer c = customers[i];
+        if (c.name != "")
+        {
+            std::cout << "Name: " << c.name << std::endl;
+            std::cout << "ID: " << c.id << std::endl;
+            std::cout << "Balance: " << c.balance << std::endl;
+            std::cout << "Phone Number: " << c.number << std::endl;
+            std::cout << "Password: " << c.password << std::endl;
+            std::cout << std::endl;
+        }
+    }
+}
