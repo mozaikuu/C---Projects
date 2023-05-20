@@ -32,7 +32,7 @@ public:
         // num_users++;
     }
 
-    virtual void GUI()
+    virtual void ATM()
     {
         int x;
         std::cout << "what would you like to do?" << std::endl;
@@ -63,9 +63,6 @@ public:
             // transfer();
             break;
         case 6:
-            // buy();
-            break;
-        case 7:
             exit(0);
             break;
         default:
@@ -88,7 +85,7 @@ public:
         this->discount = discount;
         // num_vips++;
     }
-    void GUI() override
+    void ATM() override
     {
         // buy(discount);   needs to be implemented
     }
