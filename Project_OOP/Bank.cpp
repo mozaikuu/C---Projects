@@ -1,9 +1,8 @@
 #include <iostream>
-#include "Classes.cpp"
 #include "Menu.cpp"
 #include "login.cpp"
-#include "forgotpass.cpp"
-#include "Register.cpp"
+// #include "forgotpass.cpp"
+// #include "Register.cpp"
 
 using std::string, std::cout, std::cin;
 

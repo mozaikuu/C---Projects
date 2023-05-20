@@ -7,7 +7,7 @@ const int SIZE = 20;
 class Customer
 {
 public:
-    static int num_users;
+    // static int num_users;
     string name;
     int id;
     int number;
@@ -21,7 +21,7 @@ public:
         balance = bal;
         number = number;
         password = password;
-        num_users++;
+        // num_users++;
     }
     virtual void GUI()
     {
@@ -72,12 +72,12 @@ class vip : public Customer
 {
 public:
     int discount;
-    static int num_vips;
+    // static int num_vips;
 
     vip(string name, int id, int bal, int number, std::string password, int discount) : Customer(name, id, bal, number, password)
     {
         discount = discount;
-        num_vips++;
+        // num_vips++;
     }
     void GUI() override
     {
@@ -125,3 +125,23 @@ vip Vip[SIZE] = {vip("ahmed", 1, 1000, 01042333253, "pass1", 10),
                  vip("", 0, 0, 0, "", 0),
                  vip("", 0, 0, 0, "", 0),
                  vip("", 0, 0, 0, "", 0)};
+
+// ________________________________________________________________________________
+
+// void printCustomers(Customer customers)
+// {
+//     std::cout << "Customers:" << std::endl;
+//     for (int i = 0; i < SIZE; i++)
+//     {
+//         Customer c = customers[i];
+//         if (c.name != "")
+//         {
+//             std::cout << "Name: " << c.name << std::endl;
+//             std::cout << "ID: " << c.id << std::endl;
+//             std::cout << "Balance: " << c.balance << std::endl;
+//             std::cout << "Phone Number: " << c.number << std::endl;
+//             std::cout << "Password: " << c.password << std::endl;
+//             std::cout << std::endl;
+//         }
+//     }
+// }

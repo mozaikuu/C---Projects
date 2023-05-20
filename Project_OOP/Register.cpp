@@ -163,28 +163,28 @@ void Register()
     std::cin >> x;
     std::cout << std::endl;
 
-    switch (x)
-    {
-    case 1:
-        add(customer, num_users);
-        break;
-    case 2:
-        remove();
-        break;
-    case 3:
-        replace();
-        break;
-    case 4:
-        Promote(customer, num_users);
-        break;
-    case 5:
-        std::cout << "exiting..." << std::endl;
-        exit(0);
-        break;
-    default:
-        std::cout << "invalid input..." << std::endl;
-        std::cout << std::endl;
-        Register();
-        break;
-    }
+    // switch (x)
+    // {
+    // case 1:
+    //     add(customer, num_users);
+    //     break;
+    // case 2:
+    //     remove();
+    //     break;
+    // case 3:
+    //     replace();
+    //     break;
+    // case 4:
+    //     Promote(customer, num_users);
+    //     break;
+    // case 5:
+    //     std::cout << "exiting..." << std::endl;
+    //     exit(0);
+    //     break;
+    // default:
+    //     std::cout << "invalid input..." << std::endl;
+    //     std::cout << std::endl;
+    //     Register();
+    //     break;
+    // }
 }

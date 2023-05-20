@@ -1,8 +1,8 @@
 #include <iostream>
 
 void login();
-void Register();
-void forgotPassword();
+// void Register();
+// void forgotPassword();
 
 void Menu()
 {
@@ -22,16 +22,16 @@ void Menu()
     case 1:
         login();
         break;
-    case 2:
-        Register();
-        break;
-    case 3:
-        forgotPassword();
-        break;
-    case 4:
-        std::cout << "exiting..." << std::endl;
-        exit(0);
-        break;
+    // case 2:
+    //     Register();
+    //     break;
+    // case 3:
+    //     forgotPassword();
+    //     break;
+    // case 4:
+    //     std::cout << "exiting..." << std::endl;
+    //     exit(0);
+    //     break;
     default:
         std::cout << "invalid input..." << std::endl;
         std::cout << std::endl;
