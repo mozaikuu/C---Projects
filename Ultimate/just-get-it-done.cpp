@@ -11,12 +11,12 @@ int main()
     // what everyone has paid.
     double moussa = 800;
     double rawan = 200;
-    double fawaz = 300;
-    double shahd = 0; //300
-    double amira = 0; //300
+    double fawaz = 1080; // 300+230+550=1480
+    double shahd = 300;
+    double amira = 700;
     double esmail = 300;
-    double samaa = 0; //300
-    double basmala = 0; //300
+    double samaa = 300;
+    double basmala = 300;
 
     // total money.
     double total = moussa + fawaz + rawan + shahd + samaa + basmala + amira + esmail;
