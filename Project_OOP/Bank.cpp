@@ -32,66 +32,66 @@ public:
         // num_users++;
     }
 
-    // virtual void GUI()
-    // {
-    //     int x;
-    //     std::cout << "what would you like to do?" << std::endl;
-    //     std::cout << "1. deposit." << std::endl;
-    //     std::cout << "2. withdraw." << std::endl;
-    //     std::cout << "3. check balance." << std::endl;
-    //     std::cout << "4. exit." << std::endl;
-    //     std::cout << std::endl;
-    //     std::cout << "enter number: ";
-    //     std::cin >> x;
-    //     std::cout << std::endl;
+    virtual void GUI()
+    {
+        int x;
+        std::cout << "what would you like to do?" << std::endl;
+        std::cout << "1. deposit." << std::endl;
+        std::cout << "2. withdraw." << std::endl;
+        std::cout << "3. check balance." << std::endl;
+        std::cout << "4. exit." << std::endl;
+        std::cout << std::endl;
+        std::cout << "enter number: ";
+        std::cin >> x;
+        std::cout << std::endl;
 
-    //     switch (x)
-    //     {
-    //     case 1:
-    //         // deposit();
-    //         break;
-    //     case 2:
-    //         // withdraw();
-    //         break;
-    //     case 3:
-    //         // checkBalance();
-    //         break;
-    //     case 4:
-    //         // invest();
-    //         break;
-    //     case 5:
-    //         // transfer();
-    //         break;
-    //     case 6:
-    //         // buy();
-    //         break;
-    //     case 7:
-    //         exit(0);
-    //         break;
-    //     default:
-    //         std::cout << "invalid input..." << std::endl;
-    //         std::cout << std::endl;
-    //         // GUI();
-    //         break;
-    //     }
-    // }
+        switch (x)
+        {
+        case 1:
+            // deposit();
+            break;
+        case 2:
+            // withdraw();
+            break;
+        case 3:
+            // checkBalance();
+            break;
+        case 4:
+            // invest();
+            break;
+        case 5:
+            // transfer();
+            break;
+        case 6:
+            // buy();
+            break;
+        case 7:
+            exit(0);
+            break;
+        default:
+            std::cout << "invalid input..." << std::endl;
+            std::cout << std::endl;
+            // GUI();
+            break;
+        }
+    }
 };
 
 class Vip : public Customer
 {
 public:
     int discount;
-    // static int num_vips;
+    static int num_vips;
 
     Vip(std::string name, std::string id, int bal, std::string number, std::string password, int discount) : Customer(name, id, bal, number, password)
     {
         this->discount = discount;
-        // num_vips++;
+        num_vips++;
     }
-    // void GUI() override
-    // {
-    //     // buy(discount);   needs to be implemented
-    // }
+    void GUI() override
+    {
+        // buy(discount);   needs to be implemented
+    }
 };
 
 Customer customer[SIZE] = {Customer("ahmed", "1", 1000, "01042333253", "pass1"),
@@ -188,59 +188,59 @@ void Register()
     // }
 }
 
-// void forgotPassword()
-// {
-//     std::string userTemp;
-//     std::string idTemp;
-//     std::string numberTemp;
-//     std::string passTemp;
-//     std::string passTemp2;
+void forgotPassword()
+{
+    std::string userTemp;
+    std::string idTemp;
+    std::string numberTemp;
+    std::string passTemp;
+    std::string passTemp2;
 
-//     std::cout << "forgot password..." << std::endl;
-//     std::cout << std::endl;
+    std::cout << "forgot password..." << std::endl;
+    std::cout << std::endl;
 
-//     std::cout << "enter username: ";
-//     std::cout << std::endl;
-//     std::cin >> userTemp;
+    std::cout << "enter username: ";
+    std::cout << std::endl;
+    std::cin >> userTemp;
 
-//     std::cout << "enter ID: ";
-//     std::cout << std::endl;
-//     std::cin >> idTemp;
+    std::cout << "enter ID: ";
+    std::cout << std::endl;
+    std::cin >> idTemp;
 
-//     std::cout << "enter phone number: ";
-//     std::cout << std::endl;
-//     std::cin >> numberTemp;
+    std::cout << "enter phone number: ";
+    std::cout << std::endl;
+    std::cin >> numberTemp;
 
-//     std::cout << "enter new password: ";
-//     std::cout << std::endl;
-//     std::cin >> passTemp;
+    std::cout << "enter new password: ";
+    std::cout << std::endl;
+    std::cin >> passTemp;
 
-//     std::cout << "enter new password again: ";
-//     std::cout << std::endl;
-//     std::cin >> passTemp2;
+    std::cout << "enter new password again: ";
+    std::cout << std::endl;
+    std::cin >> passTemp2;
 
-//     std::cout << "password changed successfully." << std::endl;
-//     std::cout << std::endl;
+    std::cout << "password changed successfully." << std::endl;
+    std::cout << std::endl;
 
-//     for (int i = 0; i < SIZE; i++)
-//     {
+    for (int i = 0; i < SIZE; i++)
+    {
 
-//         if (userTemp == costumer[i].name && idTemp == costumer[i].id && numberTemp == costumer[i].number)
-//         {
-//             std::cout << "password changed successfully." << std::endl;
-//             std::cout << std::endl;
-//             break;
-//         }
-//         else if (userTemp != costumer[i].name || idTemp != costumer[i].id || numberTemp != costumer[i].number)
-//         {
-//             if (i == 10 - 1)
-//             {
-//                 std::cout << "Error: wrong username, ID, or phone number." << std::endl;
-//                 std::cout << std::endl;
-//             }
-//         }
-//     }
-// }
+        if (userTemp == customer[i].name && idTemp == customer[i].id && numberTemp == customer[i].number)
+        {
+            std::cout << "password changed successfully." << std::endl;
+            std::cout << std::endl;
+            break;
+        }
+        else if (userTemp != customer[i].name || idTemp != customer[i].id || numberTemp != customer[i].number)
+        {
+            if (i == 10 - 1)
+            {
+                std::cout << "Error: wrong username, ID, or phone number." << std::endl;
+                std::cout << std::endl;
+            }
+        }
+    }
+}
 
 void Find()
 {
@@ -341,7 +341,7 @@ void Menu()
         login();
         break;
     case 2:
-        // Register();
+        Register();
         break;
     // case 3:
     //     forgotPassword(); // FIXME: forgot password
@@ -391,126 +391,126 @@ void Menu()
 //     Menu();
 // }
 
-// void remove()
-// {
-//     std::string name;
-//     std::cout << "enter name: ";
-//     std::cin >> name;
-//     std::cout << std::endl;
-//     std::cout << "enter password: ";
-//     std::string password;
-//     std::cin >> password;
-//     std::cout << std::endl;
+void remove()
+{
+    std::string name;
+    std::cout << "enter name: ";
+    std::cin >> name;
+    std::cout << std::endl;
+    std::cout << "enter password: ";
+    std::string password;
+    std::cin >> password;
+    std::cout << std::endl;
 
-//     for (int i = 0; i < SIZE; i++)
-//     {
-//         if (customer[i].name == name && customer[i].password == password)
-//         {
-//             customer[i].name = "";
-//             customer[i].id = "0";
-//             customer[i].number = 0;
-//             customer[i].password = "";
-//             customer[i].balance = 0;
-//             std::cout << "user removed." << std::endl;
-//             std::cout << std::endl;
-//             Menu();
-//         }
-//         else if (i == SIZE - 1)
-//         {
-//             std::cout << "user not found..." << std::endl;
-//             std::cout << std::endl;
-//             Menu();
-//         }
-//     }
-// }
+    for (int i = 0; i < SIZE; i++)
+    {
+        if (customer[i].name == name && customer[i].password == password)
+        {
+            customer[i].name = "";
+            customer[i].id = "0";
+            customer[i].number = "0";
+            customer[i].password = "";
+            customer[i].balance = 0;
+            std::cout << "user removed." << std::endl;
+            std::cout << std::endl;
+            Menu();
+        }
+        else if (i == SIZE - 1)
+        {
+            std::cout << "user not found..." << std::endl;
+            std::cout << std::endl;
+            Menu();
+        }
+    }
+}
 
-// void replace()
-// {
-//     std::string name;
-//     std::cout << "enter name: ";
-//     std::cin >> name; // repetittive bs 3adi \<3
-//     std::cout << std::endl;
-//     std::cout << "enter password: ";
-//     std::string password;
-//     std::cin >> password;
-//     std::cout << std::endl;
+void replace()
+{
+    std::string name;
+    std::cout << "enter name: ";
+    std::cin >> name; // repetittive bs 3adi \<3
+    std::cout << std::endl;
+    std::cout << "enter password: ";
+    std::string password;
+    std::cin >> password;
+    std::cout << std::endl;
 
-//     for (int i = 0; i < SIZE; i++)
-//     {
-//         if (customer[i].name == name && customer[i].password == password)
-//         {
-//             std::string name;
-//             std::string id;
-//             int number;
-//             std::string password;
-//             int balance;
+    for (int i = 0; i < SIZE; i++)
+    {
+        if (customer[i].name == name && customer[i].password == password)
+        {
+            std::string name;
+            std::string id;
+            int number;
+            std::string password;
+            int balance;
 
-//             std::cout << "enter name: ";
-//             std::cin >> name;
-//             std::cout << "enter id: ";
-//             std::cin >> id;
-//             std::cout << "enter number: ";
-//             std::cin >> number;
-//             std::cout << "enter password: ";
-//             std::cin >> password;
-//             std::cout << "enter balance: ";
-//             std::cin >> balance;
-//             std::cout << std::endl;
+            std::cout << "enter name: ";
+            std::cin >> name;
+            std::cout << "enter id: ";
+            std::cin >> id;
+            std::cout << "enter number: ";
+            std::cin >> number;
+            std::cout << "enter password: ";
+            std::cin >> password;
+            std::cout << "enter balance: ";
+            std::cin >> balance;
+            std::cout << std::endl;
 
-//             customer[i].name = name;
-//             customer[i].id = id;
-//             customer[i].number = number;
-//             customer[i].password = password;
-//             customer[i].balance = balance;
-//             std::cout << "user replaced." << std::endl;
-//             std::cout << std::endl;
-//             Menu();
-//         }
-//         else if (i == SIZE - 1)
-//         {
-//             std::cout << "user not found..." << std::endl;
-//             std::cout << std::endl;
-//             Menu();
-//         }
-//     }
-// }
+            customer[i].name = name;
+            customer[i].id = id;
+            customer[i].number = number;
+            customer[i].password = password;
+            customer[i].balance = balance;
+            std::cout << "user replaced." << std::endl;
+            std::cout << std::endl;
+            Menu();
+        }
+        else if (i == SIZE - 1)
+        {
+            std::cout << "user not found..." << std::endl;
+            std::cout << std::endl;
+            Menu();
+        }
+    }
+}
 
-// void Promote(Customer customer[], int &num_users, Vip vip[], int &num_vips)
-// {
-//     std::string name;
-//     std::cout << "Enter name: ";
-//     std::cin >> name;
-//     std::cout << std::endl;
+void Promote(Customer customer[], int &num_users, Vip vip[], int &num_vips)
+{
+    std::string name;
+    std::cout << "Enter name: ";
+    std::cin >> name;
+    std::cout << std::endl;
 
-//     std::string password;
-//     std::cout << "Enter password: ";
-//     std::cin >> password;
-//     std::cout << std::endl;
+    std::string password;
+    std::cout << "Enter password: ";
+    std::cin >> password;
+    std::cout << std::endl;
 
-//     bool found = false;
-//     for (int i = 0; i < num_users; i++)
-//     {
-//         if (customer[i].name == name && customer[i].password == password)
-//         {
-//             vip[num_vips] = {customer[i].name, customer[i].id, customer[i].balance, customer[i].number, customer[i].password, 0}; // TEST: if it works
-//             customer[i].name = "";
-//             customer[i].id = "0";
-//             customer[i].number = 0;
-//             customer[i].password = ""; // just realized i can use .clear() lol a7a?  what i was actually saying was that i need sorting
-//             customer[i].balance = 0;
-//             num_users--;
+    bool found = false;
+    for (int i = 0; i < num_users; i++)
+    {
+        if (customer[i].name == name && customer[i].password == password)
+        {
+            vip[num_vips] = {customer[i].name, customer[i].id, customer[i].balance, customer[i].number, customer[i].password, 0}; // TEST: if it works
+            customer[i].name = "";
+            customer[i].id = "0";
+            customer[i].number = "0";
+            customer[i].password = ""; // just realized i can use .clear() lol a7a?  what i was actually saying was that i need sorting
+            customer[i].balance = 0;
+            num_users--;
 
-//             found = true;
-//             std::cout << "Customer " << name << " has been Promoted to VIP." << std::endl;
-//             break;
-//         }
-//     }
+            found = true;
+            std::cout << "Customer " << name << " has been Promoted to VIP." << std::endl;
+            break;
+        }
+    }
 
-//     if (!found)
-//     {
-//         std::cout << "Customer " << name << " not found." << std::endl;
-//     }
-// }
+    if (!found)
+    {
+        std::cout << "Customer " << name << " not found." << std::endl;
+    }
+}
 
 /*
 .......##.......##....##.....##....###....####.##....##
